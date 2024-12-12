@@ -17,7 +17,7 @@ app.use("/api/vote", voteRoutes);
 app.get("/", (req, res) => {
   const logMessage = `Welcome message sent to ${req.ip}.`;
   res.send({
-      message: "Where are you going?",
+      message: "Where are you going bitch?",
       author: "https://github.com/typicalsleepingboy",
   });
 });
