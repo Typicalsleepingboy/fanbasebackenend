@@ -14,6 +14,14 @@ app.use(express.json());
 app.use("/api/admin", adminRoutes);
 app.use("/api/vote", voteRoutes);
 
+app.get("/", (req, res) => {
+  const logMessage = `Welcome message sent to ${req.ip}.`;
+  res.send({
+      message: "Where are you going?",
+      author: "https://github.com/typicalsleepingboy",
+  });
+});
+
 mongoose.connect(process.env.MONGGO_CONNECT,
   { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to MongoDB"))
